@@ -1,6 +1,7 @@
  package pl.kompikownia.blog.aspect.timemeasurement.businesslogic;
 
 import lombok.SneakyThrows;
+import lombok.val;
 import org.springframework.stereotype.Component;
 import pl.kompikownia.blog.aspect.timemeasurement.api.UserData;
 
@@ -40,5 +41,11 @@ public class ServiceBusinessLogicImpl implements ServiceBusinessLogic {
     @Override
     public void addUser(UserData user) {
         // addUserLogic
+    }
+
+    @Override
+    public Integer calculateResult() {
+        val random = new Random();
+        return random.nextInt(5500);
     }
 }

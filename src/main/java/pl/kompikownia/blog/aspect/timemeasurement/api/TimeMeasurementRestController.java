@@ -1,7 +1,6 @@
 package pl.kompikownia.blog.aspect.timemeasurement.api;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -36,5 +35,10 @@ public class TimeMeasurementRestController {
     @PostMapping("/api/service/fastest")
     public void startFastestService() {
         timeMeasurementService.fastestService();
+    }
+
+    @PostMapping("/api/service/bar")
+    public void calculateResult(@RequestBody BarObject barObject) {
+        timeMeasurementService.runVeryComplicatedOperation(barObject.getText(), barObject.getNumber());
     }
 }

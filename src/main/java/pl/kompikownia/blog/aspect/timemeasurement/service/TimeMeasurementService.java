@@ -30,4 +30,9 @@ public class TimeMeasurementService {
     public void addUser(UserData userData) {
         serviceBusinessLogic.addUser(userData);
     }
+
+    public Integer runVeryComplicatedOperation(String arg1, Integer arg2) {
+        // do something with arg1 and arg2
+        return serviceBusinessLogic.calculateResult();
+    }
 }

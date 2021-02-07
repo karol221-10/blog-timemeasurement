@@ -8,4 +8,5 @@ public interface ServiceBusinessLogic {
     void slowService();
     void verySlowService();
     void addUser(UserData user);
+    Integer calculateResult();
 }
