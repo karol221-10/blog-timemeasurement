@@ -1,12 +1,13 @@
- package pl.kompikownia.blog.aspect.timemeasurement.service;
+ package pl.kompikownia.blog.aspect.timemeasurement.businesslogic;
 
 import lombok.SneakyThrows;
 import org.springframework.stereotype.Component;
+import pl.kompikownia.blog.aspect.timemeasurement.api.UserData;
 
 import java.util.Random;
 
 @Component
-public class ServiceBusinessLogicImpl implements ServiceBusinessLogic{
+public class ServiceBusinessLogicImpl implements ServiceBusinessLogic {
     @SneakyThrows
     @Override
     public void fastestService() {
@@ -34,5 +35,10 @@ public class ServiceBusinessLogicImpl implements ServiceBusinessLogic{
     private int randAdditionalTime() {
         Random random = new Random();
         return random.nextInt(1500);
+    }
+
+    @Override
+    public void addUser(UserData user) {
+        // addUserLogic
     }
 }

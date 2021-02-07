@@ -2,6 +2,8 @@ package pl.kompikownia.blog.aspect.timemeasurement.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
+import pl.kompikownia.blog.aspect.timemeasurement.api.UserData;
+import pl.kompikownia.blog.aspect.timemeasurement.businesslogic.ServiceBusinessLogic;
 
 @RequiredArgsConstructor
 @Component
@@ -23,5 +25,9 @@ public class TimeMeasurementService {
 
     public void verySlowService() {
         serviceBusinessLogic.verySlowService();
+    }
+
+    public void addUser(UserData userData) {
+        serviceBusinessLogic.addUser(userData);
     }
 }
